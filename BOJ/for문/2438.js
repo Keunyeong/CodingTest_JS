@@ -11,3 +11,17 @@ for(let i=1; i<length+1; i++){
 }
 
 console.log(answer);
+
+//// repeat() 
+
+let fs = require('fs'); //(/dev/stdin)
+let input = fs.readFileSync('input.txt').toString().split('\n');
+
+let length = Number(input[0]);
+let answer = '';
+for(let i=1; i<length+1; i++){
+  i === 1 ? answer += `*` :
+  answer += `\n${'*'.repeat(i)}`;
+}
+
+console.log(answer);
